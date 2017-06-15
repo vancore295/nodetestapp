@@ -1,0 +1,51 @@
+@html.extend('layout', function(model) {
+	@html.block("body", function(model) {
+        <h1>@model.titlle</h1>
+<form action="/addMenuItem" method="post" class="row">
+<div class="col-md-6">
+    <div class="form-group">
+        <label>route</label>
+        <input class="form-control" type="text" id="route" name="route" />
+
+        <label>href</label>
+        <input class="form-control" type="text" id="href" name="href" />
+
+        <label>target</label>
+        <input class="form-control" type="text" id="target" name="target" />
+
+        <label>linkLabel</label>
+        <input class="form-control" type="text" id="linkLabel" name="linkLabel" />
+
+        <label>imageSource</label>
+        <input class="form-control" type="text" id="imageSource" name="imageSource" />
+
+        <label>dataToggle</label>
+        <input class="form-control" type="text" id="dataToggle" name="dataToggle" />
+
+        <label>dataPlacement</label>
+        <input class="form-control" type="text" id="dataPlacement" name="dataPlacement" />
+
+        <label>title</label>
+        <input class="form-control" type="text" id="title" name="title" />
+
+        <div class="checkbox-inline">
+                <label>showLabel <input type="checkbox" id="showLabel" name="showLabel" /></label>        
+        </div>
+        <div class="checkbox-inline">
+                <label>showImage <input type="checkbox" id="showImage" name="showImage" /></label>        
+        </div>
+    </div>
+</div>
+
+<input class="btn btn-primary" type="submit" value="submit" />
+</form>
+	})
+})
+
+@if(model.error){
+    <p class="text-error">Error occurred</p>
+}
+
+
+
+
