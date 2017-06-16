@@ -17,16 +17,14 @@
                 dataToggle: req.body.dataToggle,
                 dataPlacement: req.body.dataPlacement,
                 title: req.body.title,
-                showImage: req.body.showImage,
-                showLabel: req.body.showLabel
+                showImage: req.body.showImage || null,
+                showLabel: req.body.showLabel || null
             });
             newMenuItem.save();
+            res.status(200).redirect("/menu");
             //console.log(newMenuItem);
 
         });
     }
-    menucontroller.addItem = function(req, res) {
-
-    };
 
 })(module.exports)

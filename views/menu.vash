@@ -28,11 +28,15 @@
         <label>title</label>
         <input class="form-control" type="text" id="title" name="title" />
 
-        <div class="checkbox-inline">
-                <label>showLabel <input type="checkbox" id="showLabel" name="showLabel" /></label>        
+        <label>showLabel</label>
+        <div class="form-group">
+                <label>Yes <input type="radio" id="showLabel" name="showLabel" /></label>
+                <label>No <input type="radio" id="showLabel" name="showLabel" /></label>
         </div>
-        <div class="checkbox-inline">
-                <label>showImage <input type="checkbox" id="showImage" name="showImage" /></label>        
+        <label>showImage</label>        
+        <div class="form-group">
+                <label>Yes <input type="radio" id="showImage" name="showImage" /></label>
+                <label>No <input type="radio" id="showImage" name="showImage" /></label>                
         </div>
     </div>
 </div>
