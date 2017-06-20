@@ -1,6 +1,22 @@
 @html.extend('layout', function(model) {
 	@html.block("body", function(model) {
-        <h1>@model.titlle</h1>
+        <h1>@model.title</h1>
+        <div clss="">
+        @for(var i =0; i < model.data.length;i++){
+            <ul class="col-sm-1">
+                <li>route: @model.data[i].route</li>
+                <li>href: @model.data[i].href</li>
+                <li>target: @model.data[i].target</li>
+                <li>linkLabel: @model.data[i].linkLabel</li>
+                <li>imageSource: @model.data[i].imageSource</li>
+                <li>dataToggle: @model.data[i].dataToggle</li>
+                <li>dataPlacement: @model.data[i].dataPlacement</li>
+                <li>title: @model.data[i].title</li>
+                <li>showImage: @model.data[i].showImage</li>
+                <li>showLabel: @model.data[i].showLabel</li>
+            </ul>
+        }
+        </div>
 <form action="/addMenuItem" method="post" class="row">
 <div class="col-md-6">
     <div class="form-group">
@@ -49,7 +65,3 @@
 @if(model.error){
     <p class="text-error">Error occurred</p>
 }
-
-
-
-
