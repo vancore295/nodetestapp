@@ -6,7 +6,6 @@
         app.get("/editmenu", function(req, res) {
             menuItem.find({}, function(err, menuitems) {
                 items = menuitems;
-                //console.log(menuitems)
                 res.render("editmenu", { title: "End menu test", data: menuitems });
             });
         });
