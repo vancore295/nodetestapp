@@ -7,7 +7,3 @@
 @if(model.error){
     <p class="text-error">Error occurred</p>
 }
-
-
-
-<h1>Flarg</h1>
