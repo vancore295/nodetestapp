@@ -15,11 +15,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 controllers.init(app);
 
 var server = http.createServer(app);
-var connectionUrl = "mongodb://test:test@localhost:27017/nodetest1?readPreference=primary";
-mongoose.connect(connectionUrl);
+mongoose.connect("mongodb://test:test@localhost:27017/nodetest1?readPreference=primary");
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.on('disconnected', console.log);
 db.once("open", console.log);
 
-server.listen(3000);
+server.listen(80);
