@@ -1,3 +1,5 @@
+const PORT = 3000 || porcess.env.PORT;
+
 var http = require('http');
 var express = require('express');
 var mongoose = require('mongoose');
@@ -10,7 +12,7 @@ app.set("view engine", "vash");
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 controllers.init(app);
 
@@ -22,4 +24,4 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.on('disconnected', console.log);
 db.once("open", console.log);
 
-server.listen(3000);
+server.listen(PORT);
