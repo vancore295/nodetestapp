@@ -7,13 +7,11 @@
         "name": "Bomani"
     },
     "dependencies": {
+        "body-parser": "^1.17.2",
         "express": "^4.15.3",
         "mongodb": "^2.2.28",
         "mongoose": "^4.4.4",
-        "vash": "^0.12.2",
-        "body-parser": "^1.17.2"
+        "vash": "^0.12.2"
     },
-    "devDependencies": {
-
-    }
+    "devDependencies": {}
 }
