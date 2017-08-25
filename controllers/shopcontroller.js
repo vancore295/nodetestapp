@@ -9,7 +9,11 @@
 
         app.post("/addShopItem", function(req, res) {
             var newshopItem = new shopItem({
-
+                type: req.body.type,
+                title: req.body.title,
+                imageMain: req.body.imageMain,
+                imageAlt: req.body.imageAlt,
+                price: req.body.price
             });
             newshopItem.save();
             res.status(200).redirect("/shop");

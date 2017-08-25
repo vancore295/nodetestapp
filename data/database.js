@@ -1,6 +1,7 @@
 (function(databse) {
     var mongodb = require('mongodb');
-    var mongoUrl = "mongodb://test:test@localhost:27017/nodetest1?readPreference=primary";
+    //var mongoUrl = "mongodb://test:test@localhost:27017/nodetest1?readPreference=primary";
+    var mongoUrl = "mongodb://publicUser:thecatechasesthemoon@ds115712.mlab.com:15712/bkerncloud?readPreference=primary";
     var theDb = null;
 
     databse.getDb = function(next) {
