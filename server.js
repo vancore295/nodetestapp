@@ -12,7 +12,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-controllers.init(app);
+
 
 var server = http.createServer(app);
 
@@ -23,7 +23,10 @@ mongoose.connect(connectionUrl);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.on('disconnected', console.log);
-db.once("open", console.log);
+db.once("open", function() {
+    controllers.init(app);
+    console.log()
+});
 
 var port = 3001;
 server.listen(port);
